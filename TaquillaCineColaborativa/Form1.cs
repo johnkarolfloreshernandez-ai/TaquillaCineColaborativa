@@ -15,6 +15,13 @@ namespace TaquillaCineColaborativa
         public frmCine()
         {
             InitializeComponent();
+            cmbTipoBoleto.SelectedIndex = 0;
+            this.Text = "🎬 Taquilla de Cine - Sistema de Ventas";
+        }
+
+        private void frmCine_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
