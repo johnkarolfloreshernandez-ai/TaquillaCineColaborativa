@@ -6,7 +6,32 @@ using System.Threading.Tasks;
 
 namespace TaquillaCineColaborativa
 {
-    internal class Boleto
+    public abstract class Boleto
     {
+
+        public float precioBase;
+        // Precio base fijo de $80.00
+        protected float PrecioBase
+        {
+            get {  return precioBase; }
+            set { precioBase = value; }
+
+        }
+        public Boleto(float precioBase)
+        {
+            this.precioBase = 80.00f;
+            this.precioBase = precioBase;
+        }
+       
+
+        // Método abstracto que cada subclase debe implementar
+        public abstract float CalcularPrecioFinal();
+
+        // Método virtual opcional para mostrar información
+        public virtual string ObtenerInformacion()
+        {
+            return $"Precio base: ${PrecioBase:F2}";
+        }
     }
+
 }
