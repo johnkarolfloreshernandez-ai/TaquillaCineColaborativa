@@ -17,9 +17,10 @@ namespace TaquillaCineColaborativa
             set { precioBase = value; }
 
         }
-        public Boleto()
+        public Boleto(float precioBase)
         {
             this.precioBase = 80.00f;
+            this.precioBase = precioBase;
         }
        
 
